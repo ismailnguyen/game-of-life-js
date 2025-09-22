@@ -1,6 +1,6 @@
 {
   "name": "@ismailnguyen/game-of-life-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Conway's Game of Life - A simple JavaScript package for embedding Game of Life visualization in any website",
   "main": "src/index.js",
   "scripts": {

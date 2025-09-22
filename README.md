@@ -2,7 +2,7 @@
 
 Conway's Game of Life - A simple JavaScript package for embedding Game of Life visualization in any website.
 
-[![npm version](https://badge.fury.io/js/@ismailnguyen/game-of-life-js.svg)](https://www.npmjs.com/package/@ismailnguyen/game-of-life-js)
+[![npm version](https://badge.fury.io/js/@ismailnguyen%2Fgame-of-life-js.svg)](https://www.npmjs.com/package/@ismailnguyen/game-of-life-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
