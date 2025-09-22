@@ -16,6 +16,7 @@ class GameOfLife {
       fillColor: options.fillColor || '#000000',
       backgroundColor: options.backgroundColor || '#ffffff',
       borderColor: options.borderColor || '#cccccc',
+      showControls: options.showControls !== false, // default to true
       ...options
     };
 
@@ -68,7 +69,9 @@ class GameOfLife {
     this.container.appendChild(this.canvas);
 
     // Add controls
-    this.addControls();
+    if (this.config.showControls) {
+      this.addControls();
+    }
   }
 
   addControls() {
