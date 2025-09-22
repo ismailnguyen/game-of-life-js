@@ -1,0 +1,34 @@
+{
+  "name": "game-of-life-js",
+  "version": "1.0.0",
+  "description": "Conway's Game of Life - A simple JavaScript package for embedding Game of Life visualization in any website",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"No build process needed for this simple package\"",
+    "start": "http-server . -p 8080"
+  },
+  "keywords": [
+    "game-of-life",
+    "conway",
+    "cellular-automaton",
+    "visualization",
+    "javascript",
+    "canvas"
+  ],
+  "author": "Ismail Nguyen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismailnguyen/game-of-life-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ismailnguyen/game-of-life-js/issues"
+  },
+  "homepage": "https://github.com/ismailnguyen/game-of-life-js#readme",
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+}

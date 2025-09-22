@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Life - Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        .demo-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .demo-section h2 {
+            margin-top: 0;
+            color: #555;
+        }
+        
+        button {
+            padding: 8px 16px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Conway's Game of Life - JavaScript Package Demo</h1>
+        
+        <div class="demo-section">
+            <h2>Basic Usage</h2>
+            <p>This demonstrates the simplest way to use the package:</p>
+            <pre><code>GameOfLife.create('game-container');</code></pre>
+            <div id="game-basic"></div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Custom Configuration</h2>
+            <p>Example with custom settings:</p>
+            <pre><code>GameOfLife.create('game-custom', {
+    width: 600,
+    height: 400,
+    cellSize: 8,
+    speed: 150,
+    initialPattern: 'glider',
+    fillColor: '#ff6b6b',
+    backgroundColor: '#f8f9fa'
+});</code></pre>
+            <div id="game-custom"></div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Different Initial Patterns</h2>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div>
+                    <h3>Blinker Pattern</h3>
+                    <div id="game-blinker"></div>
+                </div>
+                <div>
+                    <h3>Custom Pattern</h3>
+                    <div id="game-pattern"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Manual Control (Auto-start disabled)</h2>
+            <p>This instance doesn't auto-start, allowing manual control:</p>
+            <div id="game-manual"></div>
+        </div>
+    </div>
+
+    <!-- Include the Game of Life script -->
+    <script src="src/game-of-life.js"></script>
+    
+    <script>
+        // Demo 1: Basic usage with defaults
+        GameOfLife.create('game-basic');
+        
+        // Demo 2: Custom configuration
+        GameOfLife.create('game-custom', {
+            width: 600,
+            height: 400,
+            cellSize: 8,
+            speed: 150,
+            initialPattern: 'glider',
+            fillColor: '#ff6b6b',
+            backgroundColor: '#f8f9fa',
+            borderColor: '#dee2e6'
+        });
+        
+        // Demo 3: Blinker pattern
+        GameOfLife.create('game-blinker', {
+            width: 300,
+            height: 200,
+            cellSize: 12,
+            speed: 500,
+            initialPattern: 'blinker',
+            fillColor: '#28a745'
+        });
+        
+        // Demo 4: Custom pattern (Beacon oscillator)
+        const beaconPattern = [
+            [1, 1, 0, 0],
+            [1, 0, 0, 0],
+            [0, 0, 0, 1],
+            [0, 0, 1, 1]
+        ];
+        
+        GameOfLife.create('game-pattern', {
+            width: 300,
+            height: 200,
+            cellSize: 12,
+            speed: 300,
+            initialPattern: beaconPattern,
+            fillColor: '#6f42c1'
+        });
+        
+        // Demo 5: Manual control
+        GameOfLife.create('game-manual', {
+            width: 500,
+            height: 300,
+            autoStart: false,
+            initialPattern: 'random',
+            fillColor: '#fd7e14'
+        });
+    </script>
+</body>
+</html>
