@@ -26,6 +26,11 @@ Or include directly in your HTML:
 <script src="https://unpkg.com/@ismailnguyen/game-of-life-js/src/game-of-life.js"></script>
 ```
 
+## Usage
+```javascript
+GameOfLife.create('game-container');
+```
+
 ## Quick Start
 
 ### HTML
