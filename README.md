@@ -2,7 +2,7 @@
 
 Conway's Game of Life - A simple JavaScript package for embedding Game of Life visualization in any website.
 
-[![npm version](https://badge.fury.io/js/game-of-life-js.svg)](https://www.npmjs.com/package/game-of-life-js)
+[![npm version](https://badge.fury.io/js/@ismailnguyen/game-of-life-js.svg)](https://www.npmjs.com/package/@ismailnguyen/game-of-life-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
@@ -17,13 +17,13 @@ Conway's Game of Life - A simple JavaScript package for embedding Game of Life v
 ## Installation
 
 ```bash
-npm install game-of-life-js
+npm install @ismailnguyen/game-of-life-js
 ```
 
 Or include directly in your HTML:
 
 ```html
-<script src="https://unpkg.com/game-of-life-js/src/game-of-life.js"></script>
+<script src="https://unpkg.com/@ismailnguyen/game-of-life-js/src/game-of-life.js"></script>
 ```
 
 ## Quick Start
@@ -39,7 +39,7 @@ Or include directly in your HTML:
 <body>
     <div id="game-container"></div>
     
-    <script src="https://unpkg.com/game-of-life-js/src/game-of-life.js"></script>
+    <script src="https://unpkg.com/@ismailnguyen/game-of-life-js/src/game-of-life.js"></script>
     <script>
         // Simple usage with defaults
         GameOfLife.create('game-container');
